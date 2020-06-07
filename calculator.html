@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calculator</title>
+    <style>
+    .contianer{
+        width: 17.7rem;
+        height: 17.5rem;
+        margin:12rem auto;
+        border: 2px solid rgb(95, 95, 247);
+        border-radius:5px;
+        background: rgb(218, 218, 252);
+    }
+    button, #display{
+        padding: .5rem 1.5rem;
+        border: 2px solid rgb(128, 128, 206);
+        background: rgb(180, 180, 250);
+        color: rgb(29, 28, 28);
+        border-radius: 5px;
+        margin: .1rem;
+        width: 4rem;
+        font-weight: bolder;
+    }
+    button:hover{
+        background-color:  rgb(207, 207, 253);
+        color: rgb(73, 73, 73);
+        cursor: pointer; 
+    }
+    #display{
+        background: rgb(235, 229, 229);
+        color: black;
+        height: 4rem;
+        width: 14.2rem;
+        font-size: 2rem;
+    }
+    .con{
+        display: flex;
+    }
+    .zero{
+        width: 8.45rem;
+    }
+    .equalsign{
+        height: 4.6rem;
+        margin-left:.36rem;
+    }
+    
+    </style>
+</head>
+<body>
+     <div class="contianer">
+        <div>
+             <input type="text" id="display"></input>
+            <div>
+                <button onclick="insertOp('+')">+</button>
+                <button onclick="insertOp('-')">-</button>
+                <button onclick="insertOp('*')">x</button>
+                <button onclick="clean()">C</button>
+            </div>
+            <div>
+                <button onclick="insert(7)" >7</button>
+                <button onclick="insert(8)">8</button>
+                <button onclick="insert(9)">9</button>
+                <button onclick="insertOp('/')">/</button>
+            </div>
+            <div>
+                <button onclick="insert('4')">4</button>
+                <button onclick="insert('5')">5</button>
+                <button onclick="insert('6')">6</button>
+                <button onclick="back()">«</button>
+            </div>
+        </div>
+        <div class="con">
+            <div>  
+                <div>
+                    <button onclick="insert('1')">1</button>
+                    <button onclick="insert('2')">2</button>
+                    <button onclick="insert('3')">3</button>
+                </div>
+                <div>
+                    <button class="zero" onclick="insert('0')">0</button>
+                    <button onclick="insertDec('.')">.</button>
+                </div>
+            </div>
+            <div>
+                <button class="equalsign" onclick="equalTo()">=</button>
+            </div>
+        </div>
+    </div>
+     
+<script src="calculatorjs.js"></script>  
+</body>
+
+</html>
